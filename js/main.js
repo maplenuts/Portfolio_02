@@ -79,6 +79,22 @@ $(document).ready(function () {
    });
 
 
+   // 풀페이지 깨졌을 때 1600 이하에서 헤더 고정해야함
+   // $(window).resize(function () {
+   //    let windowWidth = $(window).width();
+   //    if (windowWidth < 1600) {
+   //       $("#header").addClass("active");
+   //    } else {
+
+   //    }
+   // });
+
+   $(".map_gnb > li").click(function () {
+      $(this).find(".map_depth2.close").slideDown();
+      $(this).siblings().find(".map_depth2.close").slideUp();
+   });
+
+
 
    AOS.init({
       // Global settings:
